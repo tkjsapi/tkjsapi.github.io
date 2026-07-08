@@ -1,4 +1,25 @@
-
+class a648daef0000{
+	constructor(master,class_,id) {
+		let a = document.createElement("ul");
+		a.className = class_;
+		a.id = id;
+		master.appendChild(a);
+		this.a = a;
+	}
+	appEnd(ele){
+		this.a.appendChild(ele);
+	}
+	deleteEnd(){
+		let lastEle = this.a.lastElementChild;
+		if (lastEle)
+		{
+			this.a.removeChild(lastEle);
+		}
+	}
+	getObj(){
+		return this.a;
+	}
+}
 
 class tk {
 	static Tk = function(){return document.body;}
@@ -54,31 +75,10 @@ class tk {
 		return a;
 	}
 
-	static Listbox = class {
-		constructor(master,class_,id) {
-			let a = document.createElement("ul");
-			a.className = class_;
-			a.id = id;
-			master.appendChild(a);
-			this.a = a;
-		}
-		appEnd(ele){
-			this.a.appendChild(ele);
-		}
-		deleteEnd(){
-			let lastEle = this.a.lastElementChild;
-			if (lastEle)
-			{
-				this.a.removeChild(lastEle);
-			}
-		}
-		getObj(){
-			return this.a;
-		}
-	}
+	static Listbox = a648daef0000;
 	static ListboxLine(master,class_,id,ele){
 		let a = document.createElement("li");
-		a.textContent = text;
+		a.textContent = ele;
 		a.className = class_;
 		a.id = id;
 		master.appendChild(a);

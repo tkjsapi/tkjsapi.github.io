@@ -2,25 +2,27 @@
 <html>
 <head>
 	<title>Page Title</title>
-	<script src='./api/tkjs/tkinterjs.js'></script>
 	<link rel="icon" href="./DGJAPI.png" type="image/png">
 	<title>DGJAPI - A MIDDLE SCHOOL STUDENT'S API</title>
 </head>
 <body>	
 	<style>
-		#titlebox {
+		.box {
 			background:rgb(12,50,9);
 			color:rgb(150,200,255);
 			margin:0 auto;
 			width:fit-content;
+			border-radius: 8px;
+			margin-bottom: 20px;
 		}
-		#title {
+		.label {
 			font-family:"Courier New","Consolas",monospace;
 			margin:0 auto;
 			width:fit-content;
 			font-size:42px;
 		}
 	</style>
+	<script src='./api/tkjs/tkinterjs.js'></script>
 	<script>
 		let root = tk.Tk()
 		let titlebox = tk.Frame(root,"box","titlebox",1600,50)
@@ -29,7 +31,7 @@
 		let apilistbox = tk.Frame(root,"box","apilistbox",1600,800)
 		let apilisttilte = tk.Label(apilistbox,"label","apilisttitle_","API列表")
 		let apilist = new tk.Listbox(apilistbox,"lb","listbox")
-		apilist.appEnd(tk.ListboxLine(apilist,"li","tkjs_line","TkJS"))
+		apilist.appEnd(tk.ListboxLine(apilist.getObj(),"li","tkjs_line","TkJS"))
 	</script>
 </body>
 </html>
