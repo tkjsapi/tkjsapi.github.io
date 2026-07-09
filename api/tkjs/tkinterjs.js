@@ -169,6 +169,9 @@ class tkEvent{
 	static getIdByElement(element){
 		return element.id;
 	}
+	static deleteElement(element){
+		document.removeChild(element);
+	}
 }
 
 class tkStyle {
