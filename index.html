@@ -32,10 +32,6 @@
 	<script>
 		let root = tk.Tk()
 		let name = ""
-
-		window.TKJSuiType = 2;
-
-		tk.title("TKJS PAGE")
 		let a = messagebox.showinput(root,"input","what your name?",function(name){let b = messagebox.showinfo(root,"welcome",`欢迎${name}来到dgjapi!`)})
 
 		let titlebox = tk.Frame(root,"box","titlebox",1600,50)
@@ -61,8 +57,6 @@
 				canv.create_rectangle(new Vec2d(50+i*50,50+j*50),100,100)
 			}
 		}
-
-		tk.update()
 	</script>
 </body>
 </html>
